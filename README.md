@@ -1,6 +1,6 @@
 # pwr-components
 
-Implementation of PWR Chain Components.
+Implementation of PWR Chain Components
 
 > NOTE: The implementation of Wrapper and Handler nodes in Rust and JavaScript is still in development stages.
 
