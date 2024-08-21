@@ -4,7 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-pwr-rs = "0.2.0"
+pwr-rs = "0.2.1"
+rand = "0.8.5"
 
 [dev-dependencies]
 tokio = { version = "1.0", features = ["full"] }
