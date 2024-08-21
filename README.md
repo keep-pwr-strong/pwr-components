@@ -1,4 +1,4 @@
-# pwr-components
+# PWR Chain Components
 
 Implementation of PWR Chain Components
 
