@@ -1,8 +1,8 @@
-import { PWRJS, PWRWallet } from "@pwrjs/core"
+import { PWRWallet } from "@pwrjs/core"
 
 const transactionsToSubmit = [];
 const wrapperWallet = new PWRWallet("0x9D4428C6E0638331B4866B70C831F8BA51C11B031F4B55EED4087BBB8EF0151F");
-const vmId = 50;
+const vmId = 70;
   
 function hasTransaction(txn) {
   return transactionsToSubmit.some(t => Buffer.compare(t, txn) === 0);

@@ -1,5 +1,6 @@
-import { addTransactionToSubmit, initTxnSubmission } from "./wrapper.js"
-import crypto from "crypto"
+import { addTransactionToSubmit, initTxnSubmission } from "./wrapper.js";
+import { Handler } from "./handler.js";
+import crypto from "crypto";
 
 function createDummyTransaction() {
   // Create a random byte array to simulate a transaction
@@ -7,8 +8,7 @@ function createDummyTransaction() {
 }
 
 addTransactionToSubmit(createDummyTransaction());
-addTransactionToSubmit(createDummyTransaction());
-addTransactionToSubmit(createDummyTransaction());
-addTransactionToSubmit(createDummyTransaction());
-
 initTxnSubmission();
+
+let handleNode = new Handler();
+handleNode.handle();
