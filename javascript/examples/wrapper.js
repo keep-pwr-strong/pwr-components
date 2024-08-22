@@ -16,10 +16,8 @@ export class Wrapper {
     if (!this.hasTransaction(txn)) transactionsToSubmit.push(txn);
   }
 
-  async initTxnSubmission() {
-    let nonce = await wrapperWallet.getNonce()
-  
-    setInterval(() => {
+  async initTxnSubmission() {  
+    setInterval(async () => {
       if (transactionsToSubmit.length === 0) return;
   
       const txns = [...transactionsToSubmit];
@@ -41,6 +39,7 @@ export class Wrapper {
   
       console.log(`Wrapper: Submitting ${txns.length} transactions`);
   
+      let nonce = await wrapperWallet.getNonce()
       wrapperWallet.sendVMDataTxn(this.vmId, buffer, nonce)
         .then(response => {
           if (!response.success) {
