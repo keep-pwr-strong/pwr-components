@@ -5,7 +5,7 @@ const pwrjs = new PWRJS("https://pwrrpc.pwrlabs.io/")
   
 export class Handler {
   constructor() {
-    this.baseLayerStartingBlock = 117355; // TODO: change this to the correct block number
+    this.baseLayerStartingBlock = 129299; // TODO: change this to the correct block number
     this.vmId = 70;
   }
 
@@ -26,7 +26,6 @@ export class Handler {
           this.processTransactions(extractedTxns, txns[0].timestamp);
 
           this.baseLayerStartingBlock++;
-          console.log(this.baseLayerStartingBlock)
           // TODO: save progress to disk
         } else {
           await new Promise((resolve) => setTimeout(resolve, 100));
@@ -43,7 +42,6 @@ export class Handler {
     for (let txn of wrappedTxns) {
       const dataHex = txn.data;
       const data = Buffer.from(dataHex.substring(2), 'hex');
-      console.log(data)
 
       let offset = 0;
       try {
