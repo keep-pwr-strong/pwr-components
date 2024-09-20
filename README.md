@@ -2,6 +2,10 @@
 
 Implementation of PWR Chain Components
 
+- ✅ [JavaScript](/javascript)
+- 🚧 [Rust](/rust)
+- 🚧 Python
+
 > NOTE: The implementation of Wrapper and Handler nodes in Rust and JavaScript is still in development stages.
 
 ## JavaScript
@@ -14,8 +18,8 @@ yarn
 node examples/main
 ```
 
-- ✅ [Wrapper node](https://github.com/keep-pwr-strong/pwr-components/blob/main/javascript/examples/wrapper.js)
-- ✅ [Handler node](https://github.com/keep-pwr-strong/pwr-components/blob/main/javascript/examples/handler.js)
+- ✅ [Wrapper node](/javascript/examples/wrapper.js)
+- ✅ [Handler node](/javascript/examples/handler.js)
 
 ## Rust
 
@@ -26,5 +30,5 @@ cd rust
 cargo run --example example
 ```
 
-- ✅ [Wrapper node](https://github.com/keep-pwr-strong/pwr-components/blob/main/rust/src/wrapper/mod.rs)
+- ✅ [Wrapper node](/rust/src/wrapper/mod.rs)
 - 🚧 Handler node
